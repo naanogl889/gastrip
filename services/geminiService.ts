@@ -2,7 +2,10 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { TripData, HelperType } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({
+  apiKey: import.meta.env.GEMINIAPIKEY as string,
+});
+
 
 export const getFuelInsights = async (data: TripData) => {
   try {
