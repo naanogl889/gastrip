@@ -37,8 +37,8 @@ export const InputField: React.FC<InputSectionProps> = ({
       </div>
       <div className="relative">
         <input
-          type="number"
-          step={step}
+          type="text"
+          inputMode="decimal"
           value={value || ''}
           onChange={(e) => onChange(parseFloat(e.target.value) || 0)}
           className="w-full px-6 py-4 bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800/80 rounded-[1.25rem] focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 dark:focus:border-indigo-400 focus:bg-white dark:focus:bg-slate-800 outline-none transition-all pr-20 text-slate-900 dark:text-slate-100 font-bold text-xl tabular-nums placeholder:text-slate-200 dark:placeholder:text-slate-700"
