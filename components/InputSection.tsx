@@ -37,8 +37,8 @@ export const InputField: React.FC<InputSectionProps> = ({
       </div>
       <div className="relative">
         <input
-          type="text"
-          inputMode="decimal"
+          type="number"
+          
           step={step}
           value={value || ''}
           onChange={(e) => onChange(parseFloat(e.target.value) || 0)}
