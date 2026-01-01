@@ -1,9 +1,12 @@
-
 import { GoogleGenAI, Type } from "@google/genai";
 import { TripData, HelperType } from "../types";
 
+const apiKey = import.meta.env.GEMINIAPIKEY as string;
+
+console.log("GEMINI API KEY EN RUNTIME:", apiKey ? "DEFINIDA" : "UNDEFINED");
+
 const ai = new GoogleGenAI({
-  apiKey: import.meta.env.GEMINIAPIKEY as string,
+  apiKey,
 });
 
 
